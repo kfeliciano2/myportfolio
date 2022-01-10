@@ -1,10 +1,107 @@
-.logo{
-    width:40%;
+
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
+*{
+    font-family: 'Luxurious Roman', cursive;
+    box-sizing:border-box;
+    
+}
+
+body{
+    color:white;
+    background-color: #0C1C34;	
+    ;
+    margin:5%;
 
 }
+
 nav{
-    background-color: #ffefe6;
+    display:flex;
+    justify-content: end;
+   margin: 1% 5%;
+   font-size: 18px;
 }
-.body{
-    background-color: #ffefe6;
+a:hover{
+    text-decoration: underline;
 }
+
+.testing{
+    position:relative;
+    min-height:100%;
+    background-color:pink;
+    min-height:100vh;
+}
+header{
+    display:flex;
+    
+    align-items: center;
+    flex-direction: row;
+    background-color:blue;
+
+    
+    
+   
+    
+    
+}
+
+.intro{
+  
+   
+}
+/* about me page */
+summary{
+    display:flex;
+}
+.aboutMe{
+   width:55%;
+}
+
+
+/*for pojects page */
+
+main{
+    display:grid;
+    grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+    gap:10%;
+    margin:15px 32px;
+}
+.project{
+    background-color:pink;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    width:400px;
+   margin:1px;
+
+}
+.project img{
+    width:90%;
+    
+    
+}
+.container{
+    display:grid;
+    grid-template: repeat(1, 1fr) /repeat(4, 1fr);
+    grid-gap: 5px;;
+;
+}
+
+
+footer{
+    
+    
+  display:flex;
+  align-items:center;
+justify-content: space-around;
+ 
+    
+    
+   
+
+   background-color:brown;
+
+}
+
+
+
