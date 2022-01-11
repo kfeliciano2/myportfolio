@@ -1,3 +1,6 @@
+*{
+    box-sizing:border-box;
+}
 body{
     background-color: black;
     color:seashell;
@@ -5,21 +8,25 @@ body{
     font-size: 22px;
     opacity: 0.9; 
 }
+
+/* navigation elements */
 nav{
     
     height: 69px;
     border-bottom: seashell;
-    display: inline-flex;
-   align-items:center;
+    display: flex;
+   
+    justify-content: space-around;
 }
+
 div.logo{
     
     width: 80px;
     height: 50px;
 }
-.navigation{
-    float: left;
-}
+
+
+/*  header/intro elements*/
 header {
     margin-top: 20px;
     position: relative;
@@ -40,33 +47,86 @@ header img{
     width: 1200px;
    
 }
-section{
-    width: 1000px;
+/* tea of month section*/
+
+
+.title{
+    grid-area: 1 / 1 / 1 /  span 5; 
+    justify-self: center;
+   align-self: center;
    
 }
 
 
+
 .teaMonth{
-width:300px;
-height: 200px;
-margin-bottom: 10px;
+  width:100%;
 }
-#tea{
-    display: flex;
-    justify-content: space-around;
+
+.teaMonthA{
+    grid-area: 2 / 2 / span 1 / span 1;
+    
 }
-.locationInfo{
-    height: 500px;
-    width:600px;
-    position: relative;
+.teaMonthB{
+    grid-area: 2 / 3 / span 1 / span 1;
+    
 }
+.teaMonthC{
+    grid-area: 2 / 4 / span 1 / span 1;
+    
+}
+.teaMonthD{
+    grid-area: 3 / 2 / span 1 / span 1;
+    
+}
+.teaMonthE{
+    grid-area: 3 / 4 / span 1 / span 1;
+    
+}
+section{
+    display:grid;
+    grid-template:  1fr 2fr 2fr / repeat(5, 1fr);
+
+}
+
+.location{
+    grid-area: 1 / 1 / 1 / span 5;
+    align-self:center;
+    justify-self: center;
+}
+
+
+
 address {
-    width: 300px;
-    position: absolute; 
-    top: 150px;
+    
     background-color: black;
+    
+   
 }
-.oakdale{
-    right: 5%;
+.addressA{
+    grid-area: 2 / 2 / span 1 / span 1;
 }
+.addressB{
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.addressC{
+    grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.locationInfo{
+    display:grid;
+    grid-template:   1fr 2fr 1fr / repeat(5, 1fr); 
+    grid-gap:1px;
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+    background-repeat:  no-repeat;
+    background-position: center;
+
+}
+
+
+
+
+
+
    
