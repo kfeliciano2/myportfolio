@@ -1,0 +1,72 @@
+body{
+    background-color: black;
+    color:seashell;
+    font-family: Helvetica;
+    font-size: 22px;
+    opacity: 0.9; 
+}
+nav{
+    
+    height: 69px;
+    border-bottom: seashell;
+    display: inline-flex;
+   align-items:center;
+}
+div.logo{
+    
+    width: 80px;
+    height: 50px;
+}
+.navigation{
+    float: left;
+}
+header {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+     justify-content: center;
+    
+}
+header img{
+    height: 700px;
+    
+}
+.mission{
+    position: absolute;
+    top: 40%;
+    background-color: black;
+    text-align: center;
+    width: 1200px;
+   
+}
+section{
+    width: 1000px;
+   
+}
+
+
+.teaMonth{
+width:300px;
+height: 200px;
+margin-bottom: 10px;
+}
+#tea{
+    display: flex;
+    justify-content: space-around;
+}
+.locationInfo{
+    height: 500px;
+    width:600px;
+    position: relative;
+}
+address {
+    width: 300px;
+    position: absolute; 
+    top: 150px;
+    background-color: black;
+}
+.oakdale{
+    right: 5%;
+}
+   
