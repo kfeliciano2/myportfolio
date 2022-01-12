@@ -1,73 +1,79 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
 
 *{
-    font-family: 'Luxurious Roman', cursive;
+  
     box-sizing:border-box;
     
     
 }
 :root{
-    --color: #32D7CE; 
+    --color: hsl(175, 56%, 63%); 
+    --secondaryColor:hsl(203, 66%, 26%);
 }
 
 body{
     color:white;
-    background-image: 
-    url('images/background.png');
-    background-size:cover;
-    margin:5%;
+    background-color:#04345C;
 
 }
 
 
 nav{
     display:flex;
-    justify-content: end;
-   margin: 1% 5%;
-   font-size: 18px;
-   text-transform: uppercase;
+    justify-content: center;
+    margin: 1% 5%;
+    font-size: 18px;
+    text-transform: uppercase;
    
 }
 
 
-
+main{
+    position:relative;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
 
 a:hover{
     text-decoration: underline;
     color: var(--color);
     cursor:pointer;
-
 }
 
 
 
 
 /*home page */
-
 main{
-    display:grid;
-    flex-direction: column;
     
+  display:flex;
+   height:90vh;
+   justify-content: center;
+  
+
+}
+.box{
+    
+    border:7px double var(--color);
+    align-self:center;
+    
+    height: 60%;
+    width:40%;
     
 }
 
-header{
-    
-    align-items: center;
-    flex-direction: row;
-    flex-grow:1;
-    height:100vh;
-    
-    
+.intro{
+   text-align:center;
+}
+.intro h1{
+    font-family: 'Parisienne', cursive;
+    font-size: 60px;
 }
 
-.intro p{
-  color: var(--color);
-}
-h1{
-    font-size: 90px;
-}
+
 
 
 /* about me page */
@@ -75,18 +81,16 @@ h1{
 summary{
     display:flex;
     flex-direction:row;
-    width:100vh;
-
    
 }
 .aboutMe {
     width:50%;
-    background-color:peru;
-
 }
 .myPhoto{
-   background-color: pink;
+    display:flex;
+    width:50%;
     justify-content: center;
+    
    
 }
 
@@ -94,24 +98,27 @@ summary{
     width:140px;
     border-radius: 50%;
     box-shadow: 3px 5px var(--color);
-    
-
 }
+
+
 
 
 /*for projects page */
 
 .container{
     display:grid;
-    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+    grid-template:  1fr 2fr 2fr / repeat(3, 1fr);
     gap:1%;
     
-    margin:15px;
-    
-
-    
+    margin:15px; 
 
 }
+.title{
+    grid-area: 1 / 1 / span 1 / span 3;
+    align-self: center;
+    justify-self: center;
+}
+
 .project{
     background-color:hsl(196, 100%, 23%);
     border-radius: 2% ;
@@ -121,9 +128,9 @@ summary{
     align-items: center;
     width:100%;
     margin:1px;
-  
 
 }
+
 .project:hover{
     
     
@@ -140,23 +147,64 @@ summary{
 .project a{
     justify-content: center;
 }
-
-@media only screen and (max-width: 900px){
-  .container{
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+.footer{
+    display:flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    margin-bottom: 2%;
+    width: 100%;
+    border-top: var(--color);
     
-  }  
 }
+/* certifications*/
+.certification{
+    display:grid;
+    grid-template:1fr 2fr 2fr 1fr /repeat(3, 1fr);
+    grid-gap: 3px;
+}
+
+.certification h1{
+    text-align: center;
+    grid-area: 1/ 1/ 1 / span 3;
+}
+.certPDF{
+    background-color:white;
+    
+    
+    
+
+}
+.certPDF img{
+   width:250px;
+}
+.certPDF:hover{
+    border: 5px double var(--color);
+    box-shadow:black;
+    cursor:pointer;
+}
+
+.btn{
+    background-color:black;
+    grid-area: 4 / 1 / span 1/ span 3;
+    text-align:center;
+    height:30px;
+    align-self:center;
+    justify-self: center;
+    margin: 0 auto;
+    padding: 5px;
+    
+    box-shadowing: 
+
+}
+
+
+
 
 
 @media only screen and (max-width: 600px){
     .container{
-      grid-template: repeat(4, 1fr) / repeat(1, 1fr);
-      
-    }  
-    
-
-
-.socialLinks{
-  justify-content: space-around;
-}
+      grid-template: repeat(7, 1fr) / repeat(1, 1fr);
+      }
+    }
